@@ -1,4 +1,4 @@
-name := """dp-dd-api"""
+name := """dp-dd-csv-exporter"""
 
 version := "1.0-SNAPSHOT"
 
