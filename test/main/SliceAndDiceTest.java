@@ -19,7 +19,7 @@ import static org.testng.Assert.fail;
 
 public class SliceAndDiceTest extends TestNGSuite {
 
-    static EntityManagerFactory emf = Persistence.createEntityManagerFactory("OnslocalBOPU");
+    static EntityManagerFactory emf = Persistence.createEntityManagerFactory("DataDiscovery");
     static EntityManager em = emf.createEntityManager();
     static Logger.ALogger logger = Logger.of(SliceAndDiceTest.class);
 
