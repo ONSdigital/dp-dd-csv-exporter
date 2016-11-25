@@ -1,0 +1,13 @@
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('UK', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('GB', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('EW', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('COUNTRY', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('REGION', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('COUNTY', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('LA', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('MSOA', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('WPC', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('NUTS0', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('NUTS1', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('NUTS2', null);
+INSERT INTO public.geographic_level_type (geographic_level_type, metadata) VALUES ('NUTS3', null);

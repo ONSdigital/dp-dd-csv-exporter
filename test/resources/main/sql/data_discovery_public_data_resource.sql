@@ -1,0 +1,1 @@
+INSERT INTO public.data_resource (data_resource, column_concept, metadata, row_concept, title) VALUES ('666', null, null, null, 'Title');

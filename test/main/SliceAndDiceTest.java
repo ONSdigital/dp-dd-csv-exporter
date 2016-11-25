@@ -1,6 +1,8 @@
 package main;
 
-import models.*;
+import models.DimensionFilter;
+import models.DimensionalDataSet;
+import models.PresentationType;
 import org.apache.commons.io.FileUtils;
 import org.scalatest.testng.TestNGSuite;
 import org.testng.annotations.BeforeClass;
@@ -14,24 +16,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.fail;
 
 
 public class SliceAndDiceTest extends TestNGSuite {
 
-    static EntityManagerFactory emf = Persistence.createEntityManagerFactory("DataDiscovery");
+    static EntityManagerFactory emf = Persistence.createEntityManagerFactory("data_discovery");
     static EntityManager em = emf.createEntityManager();
     static Logger.ALogger logger = Logger.of(SliceAndDiceTest.class);
 
     static String datasetId = "666";
     String outpileFilePath = "/logs/666.csv";
 
-
-    @BeforeClass
-    public void initialise() throws Exception {
-        PostgresTest postgresTest = new PostgresTest(em, datasetId, logger);
-        postgresTest.createDatabase();
-    }
 
     @Test
     public void generateCsvWithoutFilter() throws Exception {
@@ -48,11 +43,11 @@ public class SliceAndDiceTest extends TestNGSuite {
 
     @Test
     public void generateCsvWithMulitpleFilters() throws Exception {
-            List<DimensionFilter> dimensionFilters = new ArrayList<>();
-            dimensionFilters.add(new DimensionFilter("NACE", "Other mining"));
-            dimensionFilters.add(new DimensionFilter("Prodcom Elements", "Waste Products"));
+        List<DimensionFilter> dimensionFilters = new ArrayList<>();
+        dimensionFilters.add(new DimensionFilter("NACE", "Other mining"));
+        dimensionFilters.add(new DimensionFilter("Prodcom Elements", "Waste Products"));
 
-            assertEquals(FileUtils.readLines(generateCsv(dimensionFilters)).size(), 2);
+        assertEquals(FileUtils.readLines(generateCsv(dimensionFilters)).size(), 2);
     }
 
 
@@ -76,6 +71,12 @@ public class SliceAndDiceTest extends TestNGSuite {
             fail();
         }
         return null;
+    }
+
+
+    @BeforeClass
+    public void initialise() throws Exception {
+        new PostgresTest().createDatabase(em);
     }
 
 

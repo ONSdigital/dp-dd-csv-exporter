@@ -1,0 +1,1 @@
+INSERT INTO public.value_domain (value_domain) VALUES ('Count');
