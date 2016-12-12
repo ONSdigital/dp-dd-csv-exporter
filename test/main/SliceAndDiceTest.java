@@ -1,14 +1,14 @@
 package main;
 
 import models.DimensionFilter;
-import models.DimensionalDataSet;
-import models.PresentationType;
 import org.apache.commons.io.FileUtils;
 import org.scalatest.testng.TestNGSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import play.Logger;
 import services.CSVGenerator;
+import uk.co.onsdigital.discovery.model.DimensionalDataSet;
+import uk.co.onsdigital.discovery.model.PresentationType;
 
 import javax.persistence.*;
 import java.io.File;

@@ -37,10 +37,6 @@ public class PostgresTest {
         runDbScript(em, "sql/data_discovery_public_observation_type.sql");
         runDbScript(em, "sql/data_discovery_public_presentation_type.sql");
         runDbScript(em, "sql/data_discovery_public_presentation.sql");
-
-        // todo remove the stage tables altogether once the code writes directly
-        runDbScript(em, "sql/data_discovery_public_stage_dimensional_data_point.sql");
-        runDbScript(em, "sql/data_discovery_public_stage_category.sql");
     }
 
     private void runDbScript(EntityManager em, String filename) throws IOException {

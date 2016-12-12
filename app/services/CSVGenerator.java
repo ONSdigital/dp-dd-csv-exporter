@@ -2,14 +2,18 @@ package services;
 
 import exceptions.CSVValidationException;
 import exceptions.GLLoadException;
-import models.*;
+import models.DataDTO;
+import models.DimensionFilter;
+import models.Generate;
 import play.Logger;
+import uk.co.onsdigital.discovery.model.Category;
+import uk.co.onsdigital.discovery.model.DimensionalDataPoint;
+import uk.co.onsdigital.discovery.model.DimensionalDataSet;
 
 import javax.persistence.EntityManager;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * The Class CSVGenerator.
